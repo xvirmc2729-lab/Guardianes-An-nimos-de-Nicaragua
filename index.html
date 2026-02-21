@@ -1,21 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Mi Proyecto</title>
-  <style>
-    body {
-      font-family: Arial;
-      background-color: #f4f4f4;
-      text-align: center;
-      padding: 40px;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Héroes Poco Reconocidos de Nicaragua</title>
+
+<style>
+body{
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#0b3d91,#1e90ff);
+  color:white;
+}
+
+header{
+  text-align:center;
+  padding:40px 20px;
+}
+
+header h1{
+  font-size:2.5em;
+}
+
+.container{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.card{
+  background:white;
+  color:#333;
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+  transition:transform 0.3s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+button{
+  background:#0b3d91;
+  color:white;
+  border:none;
+  padding:10px;
+  border-radius:6px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+button:hover{
+  background:#1e90ff;
+}
+
+.hidden{
+  display:none;
+  margin-top:10px;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  margin-top:30px;
+}
+</style>
 </head>
+
 <body>
-  <h1>Mi Proyecto</h1>
-  <p>Esta es mi página web creada con GitHub Pages.</p>
+
+<header>
+<h1>Héroes Poco Reconocidos de Nicaragua</h1>
+<p>Memoria histórica y reconocimiento</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>Tulio Amin Zepeda</h2>
+<p>Combatiente comprometido con la justicia social.</p>
+<button onclick="mostrar('tulio')">Ver más</button>
+<div id="tulio" class="hidden">
+<p>Participó activamente en procesos de lucha revolucionaria. Su entrega representa el sacrificio de muchos jóvenes que defendieron ideales de soberanía nacional.</p>
+</div>
+</div>
+
+<div class="card">
+<h2>Nolberto Serapio Frank</h2>
+<p>Figura poco visibilizada en la historia nacional.</p>
+<button onclick="mostrar('nolberto')">Ver más</button>
+<div id="nolberto" class="hidden">
+<p>Reconocido por su valentía y participación en movimientos sociales que marcaron etapas importantes en la historia contemporánea de Nicaragua.</p>
+</div>
+</div>
+
+<div class="card">
+<h2>Alberto Fonseca Romero</h2>
+<p>Ejemplo de compromiso revolucionario.</p>
+<button onclick="mostrar('alberto')">Ver más</button>
+<div id="alberto" class="hidden">
+<p>Participó en acciones clave dentro del proceso de lucha armada, siendo recordado por su firmeza ideológica y entrega a la causa nacional.</p>
+</div>
+</div>
+
+<div class="card">
+<h2>Indígenas Flecheros de Matagalpa</h2>
+<p>Defensores del territorio nacional.</p>
+<button onclick="mostrar('flecheros')">Ver más</button>
+<div id="flecheros" class="hidden">
+<p>Participaron en la Guerra Nacional defendiendo la soberanía frente a invasiones extranjeras. Su papel fue crucial aunque históricamente minimizado.</p>
+</div>
+</div>
+
+</div>
+
+<footer>
+Proyecto Escolar 2026 - Historia y Memoria Nacional
+</footer>
+
+<script>
+function mostrar(id){
+  var elemento = document.getElementById(id);
+  if(elemento.style.display === "block"){
+    elemento.style.display = "none";
+  } else {
+    elemento.style.display = "block";
+  }
+}
+</script>
+
 </body>
 </html>
